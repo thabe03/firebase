@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <nav class="navbar bg-light navbar-light justify-content-end">
-        <Button className='btn btn-primary' onClick={() => toggleModal('signup')}>Sign up</Button>
+        <Button className='btn btn-primary' onClick={() => toggleModal('signup')}>Sign p</Button>
         <Button className='btn btn-primary ms-2' onClick={() => toggleModal('signin')}>Sign in</Button>
         <Button className='btn btn-danger mx-2' onClick={onsignout}>Sign out</Button>
       </nav>
