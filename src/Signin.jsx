@@ -4,7 +4,7 @@ import { Context } from './Context';
 
 export default function Signin() {
 
-  const { validation, siwep, erreur, modalState, closeModal } = useContext(Context)
+  const { validation, siwep, erreur, modalState, closeModal,toggleModal } = useContext(Context)
 
   const inputs = useRef([]);
 
@@ -40,6 +40,7 @@ export default function Signin() {
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" ref={addInputs} required />
                   </Form.Group>
+                  <p>Want to <span className='text-primary' style={{cursor:'pointer'}} onClick={() => toggleModal('signup')}>sign Up</span>?</p>
                   <Button className='btn btn-primary mt-2' type='submit'>Submit</Button>
                 </Form>
               </Card.Body>

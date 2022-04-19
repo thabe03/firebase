@@ -4,7 +4,7 @@ import { Context } from './Context';
 
 export default function Signup() {
 
-    const { validation, cuwep, erreur, modalState, closeModal } = useContext(Context)
+    const { validation, cuwep, erreur, modalState, closeModal,toggleModal } = useContext(Context)
 
     const inputs = useRef([]);
 
@@ -40,6 +40,7 @@ export default function Signup() {
                                         <Form.Label>Password</Form.Label>
                                         <Form.Control type="password" ref={addInputs} required />
                                     </Form.Group>
+                                    <p>Already an <span className='text-primary' style={{cursor:'pointer'}} onClick={() => toggleModal('signin')}>account</span>?</p>
                                     <Button className='btn btn-primary mt-2' type='submit'>Submit</Button>
                                 </Form>
                             </Card.Body>
